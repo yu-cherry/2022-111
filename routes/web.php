@@ -16,7 +16,13 @@ use Illuminate\Support\Facades\Route;
 //
 //
 //
-Route::get('/test',[\App\Http\Controllers\suisei::class,'suisei']);
+
+Route::get('/',[\App\Http\Controllers\TodoController::class,'index']);
+
+Route::get('/oen',[\App\Http\Controllers\TodoController::class,'oen'])->name('see_oen');
+
 Route::get('/index',[\App\Http\Controllers\TodoController::class,'index'])->name('index');
 Route::get('/create',[\App\Http\Controllers\TodoController::class,'get_create_page'])->name('get_create_page');
-Route::post('/create',[\App\Http\Controllers\TodoController::class,'store_create_data'])->name('store_create_data');
+Route::post('/create',[\App\Http\Controllers\TodoController::class,'suisei_create_data'])->name('suisei_create_data');
+
+Route::get('/delete',[\App\Http\Controllers\TodoController::class,'delete_data'])->name('delete_data');

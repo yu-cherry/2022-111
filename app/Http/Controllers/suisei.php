@@ -16,4 +16,6 @@ class suisei extends Controller
         return view('parges/index');
     }
 
+
+
 }

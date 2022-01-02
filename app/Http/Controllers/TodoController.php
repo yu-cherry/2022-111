@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class TodoController extends Controller
 {
+    public function oen()
+    {
+
+        $data=DB::table('suisei')->get();
+        return  view('parges/oen',compact('data',$data));
+    }
+
     public function index()
     {
         $data=DB::table('todos')->get();
@@ -17,24 +24,23 @@ class TodoController extends Controller
     {
         return  view('parges/create');
     }
-    public function store_create_data(Request $request)
+    public function suisei_create_data(Request $request)
     {
-        $title =$request->title;
-        $content =$request->content;
-        $remark =$request->remark;
-        DB::table("todos")->insert([
-           "title"=>$title,
-            "content"=>$content,
-             "remark"=>$remark
-        ]);
+        $message =$request->message;
+        $name =$request->name;
+        DB::table("suisei")->insert([
+           "message"=>$message,
+           "name"=>$name,
+           ]);
         return view('parges/create');
 
     }
-    public function delete(Request $request){
-        $id = $request->delete_id;
-        DB:table('todos')
-            ->where('id',$id)
-            ->delete();
-        return redirect()->route('index');
+    public function delete_data(Request $request){
+
+         $id =$request->get('id');
+         DB::table('todos')
+             ->where('id',$id)
+             ->delete();
+         return redirect()->route('index');
     }
 }
