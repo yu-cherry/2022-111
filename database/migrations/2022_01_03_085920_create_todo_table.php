@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSuiseiTable extends Migration
+class CreateTodoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateSuiseiTable extends Migration
      */
     public function up()
     {
-        Schema::create('suisei', function (Blueprint $table) {
+        Schema::create('todo', function (Blueprint $table) {
             $table->id();
-            $table->string('message');
-            $table->string('name');
-            $table->string('back');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateSuiseiTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('suisei');
+        Schema::dropIfExists('todo');
     }
 }

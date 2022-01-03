@@ -1,32 +1,45 @@
 @extends('layouts.master')
 @section('content')
 
-    <div class="container p-3">
-        <table class="table">
-            <thead>
-            <tr>
-                <td>標題</td>
-                <td>內容</td>
-                <td>功能</td>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($data as $row)
-                <tr>
-                    <td class="col-sm-4">{{$row->message}}</td>
-                    <td class="col-sm-4">{{$row->name}}</td>
-                    <td class="col-sm-4">
+    <h1 class="mt-5" style="color: #4bd5ff;text-align: center"><strong>150万人おめでとうー!!</strong></h1>
+    <h2 class="" style="color: white;text-align: center"><strong>星詠みより</strong></h2>
 
-                        <button class="btn btn-outline-success"
-                                onclick=edit_data({{$row->id}})>修改</button>
-                        <button class="btn btn-outline-danger"
-                                onclick=delete_data({{$row->id}})>刪除</button>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
-    </div>
+
+
+    <script type="text/javascript" src="{{asset("/js/snowstorm.js")}}"></script>
+    <style>
+        body {
+            background-image: url('{{asset("/img/sora3.jpg")}}');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+    </style>
+    <div class="container">
+        <hr style="border: 2px solid rgb(119, 223, 241);">
+        <div class="row">
+ @foreach($data as $row)
+
+        <div class="col-lg-4  col-md-12 mr-2 ml-2 mt-5">
+            <div class="aspect-ratio">
+            <div class="card" style="background-image:url('{{asset($row->back)}}');background-size:100%;
+                padding:20px;border-color: #ffffff;border-radius: 20px;aspect-ratio: 450 / 320;">
+                <div>
+                    {{$row->message}}
+                </div>
+                <h4 style="bottom: 0px;text-align:right ; position:absolute;padding: 20px;right:12px;">
+                    {{$row->name}}
+                </h4>
+
+        </div>
+        </div>
+
+        </div>
+
+    @endforeach()
+        </div>
+        </div>
     <script>
         function delete_data(id){
             window.location.href = "{{route('delete_data')}}"+"?id="+id;

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script type="text/javascript" src="{{asset("/js/snowstorm.js")}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset("/css/app.css")}}">
 
     <style>
         body {
@@ -111,7 +112,6 @@
         </div>
         <!--推特-->
         <div class="col-lg-4 col-xl-4 col-md-12 col-sm-12 mt-1">
-
             <table style="width:100%;" border="0">
                 　<tr>
                     　<td>
@@ -165,7 +165,7 @@
             <h4 class="animate__animated animate__backInUp animate__fast" style="color:rgb(255, 255, 255) ">【3DLIVE】桃鈴ねね x 星街すいせい x 常闇トワ　Christmas Live【 #ねねすいトワクリスマスライブ 】</h4>
 
         </div>
-        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12  mt-3 animate__animated animate__backInUp animate__fast">
+        <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12  mt-3 ">
             <div style="position: relative;padding-bottom: 56.25%;height: 0;overflow: hidden;">
 
 
@@ -192,22 +192,10 @@
             <hr style="border: 2px solid rgb(119, 223, 241);">
         </div>
         <!--角色介紹-->
+        <div class="col-lg-6 col-md-12 col-sm-6 col-xl-6 mt-3 text-center" style="height:700px ;">
 
-        <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6 mt-3 text-center" style="height:700px ;">
-            <th scope="col" align="center">
-                <TR>
-                    <IMG SRC="suisei1.png" NAME="thumbnail1" style="width:100%;border-radius: 20px">
-                </TR>
-                <FORM NAME="selections">
-            <TD>
-                <SELECT NAME="individual" onChange="loadIndividual(this.form)">
-                    <OPTION VALUE="suisei2.jpg" class="img-fluid">新春服
-                    <OPTION VALUE="suisei3.jpg" class="img-fluid">學生服
-                    <OPTION VALUE="suise4.jpg" class="img-fluid">日常服
-                </SELECT>
-            </TD>
-            </FORM>
-            </th>
+
+            <img src="{{asset("img/suisei1.png")}} " style="height: 100%; margin:auto">
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 col-xl-6 mt-3">
             <h3 align="left" style="color:#4bd5ff;">「彗星の如く現れたスターの原石！ <hr>
@@ -215,9 +203,10 @@
 
             <hr>
 
-            <h2 align="left" style="color:#009bfc;">個人資料</h2>
-            <h4 align="left" style="color:#ffffff;">ホロライブ5期生の雪花ラミィです
-                ホロライブ5期生青色担当、顔が肝臓(レバーフェイス) 雪花ラミィです</h4>
+            <h2 align="left" style="color:#009bfc;">開場口號</h2>
+            <h4>
+            <align="left" style="color:#ffffff;">彗星の如く現れた星の原石<br>アイドルvtuberほしまちすいせいです<br>
+            すいちゃんは 今日もかわいい</h4>
             <hr>
 
             <h2 align="left" style="color:#009bfc;">自分紹介</h2>
@@ -225,10 +214,14 @@
                 いつか武道館でライブをすることを夢見て活動している</h4>
             <hr>
             <h2 align="left" style="color:#009bfc;">別稱</h2>
-            <h4 align="left" style="color:#ffffff;">雪媽、菈米媽媽、酒花菈米、<s>割草機</s>、<s>鏟雪機</s></h4>
+            <h4 align="left" style="color:#ffffff;">星姐、六邊形戰士、<s>有點神經病的藍髮大姊姊</s>、<s>有點大姐姐的藍髮神經病</s></h4>
             <hr>
 
-
+            <div class="row">
+                <div class="">
+                    <img>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6">
                     <h2 align="left" style="color:#009bfc;">年齡:</h2>
@@ -239,7 +232,7 @@
 
                 <div class="col-lg-6">
                     <h2 align="left" style="color:#009bfc;">粉絲愛稱:</h2>
-                    <h4 align="left" style="color:#ffffff;">雪民(ゆきみん)</h4>
+                    <h4 align="left" style="color:#ffffff;">星詠み(ほしよみ)</h4>
                     <hr>
                 </div>
             </div>
